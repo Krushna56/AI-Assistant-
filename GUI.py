@@ -17,8 +17,8 @@ def send():
     print("send")
 
 # ask delete
-def delete():
-    print("delete")
+def Delete():
+    print("Delete")
 
 
 
@@ -59,7 +59,7 @@ Button2.place(x = 200, y = 575)
 
 # Button 3
 
-Button3 = Button(root, text = "DELETE", bg = "#356699", pady = 16, padx = 40, borderwidth = 3, relief = SOLID, command = send)
+Button3 = Button(root, text = "DELETE", bg = "#356699", pady = 16, padx = 40, borderwidth = 3, relief = SOLID, command = Delete)
 Button3.place(x = 330, y = 575)
 
 
