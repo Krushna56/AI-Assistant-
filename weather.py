@@ -30,15 +30,15 @@ def get_weather(city):
     except Exception as e:
         return f"Error: {str(e)}"
 
-def main():
-    city = "patna"  # You can modify this or take user input
-    weather_data = get_weather(city)
+# def main():
+#     city = "patna"  # You can modify this or take user input
+#     weather_data = get_weather(city)
     
-    if isinstance(weather_data, dict):
-        print(f"Temperature: {weather_data['temperature']}°{weather_data['unit']}")
-        print(f"Condition: {weather_data['description']}")
-    else:
-        print(weather_data)  # Print error message
+#     if isinstance(weather_data, dict):
+#         print(f"Temperature: {weather_data['temperature']}°{weather_data['unit']}")
+#         print(f"Condition: {weather_data['description']}")
+#     else:
+#         print(weather_data)  # Print error message
 
 if __name__ == "__main__":
     main()
