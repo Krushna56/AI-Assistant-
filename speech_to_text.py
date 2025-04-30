@@ -9,11 +9,3 @@ with sr.Microphone() as source:
     recognizer.adjust_for_ambient_noise(source)
     audio = recognizer.listen(source)
     
-    try:
-        # Recognize speech using Google Web Speech API
-        voice_data = recognizer.recognize_google(audio)
-        print("You said:", voice_data)
-    except sr.UnknownValueError:
-        print("Sorry, I could not understand the audio.")
-    except sr.RequestError as e:
-        print(f"Could not request results; {e}")
