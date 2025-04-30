@@ -1,5 +1,9 @@
 from tkinter import * 
 from PIL import Image, ImageTk
+import action 
+import speech_to_text
+import text_to_speech
+import weather
 
 root = Tk()
 root.title("AI Assistant")
@@ -10,7 +14,14 @@ root.config(bg="#1E1E2F")
 # ask fun 
 
 def ask():
-    print("Ask")
+    user_val = speech_to_text.speech_to_text()
+    bot_val = action.Action(user_val)
+    text.insert(END, 'User---->' + user_val + '\n')
+    if bot_val != None:
+        text.insert(END, "BOT <----" + str(bot_val) + "\n")
+    if bot_val == "ok sir":
+        root.destroy()    
+
 
 # ask send
 def send():
